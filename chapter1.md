@@ -8,31 +8,31 @@ Promise 객체는 비동기 계산을 위해 사용됩니다. Promise는 아직�
 
 promise pattern-&gt;ECMA script6 스펙에 정식 포함
 
-
-
 //프로미스 선언
 
 let promise =function\(param\){
 
 new Promise\(function\(resolve, reject\)\){
 
-        //비동기 
+```
+    //비동기 
 
-     window.setTimeout\(function\(\){
+ window.setTimeout\(function\(\){
 
-     //조건    
+ //조건    
 
-     if\(param\){
+ if\(param\){
 
-               resolve\(\);
+           resolve\(\);
 
-          }else{
+      }else{
 
-               reject\(\);
+           reject\(\);
 
-          }
+      }
 
-     },300\);
+ },300\);
+```
 
 }\);
 
@@ -42,28 +42,21 @@ new Promise\(function\(resolve, reject\)\){
 
 promise\(true\).then\(callback-성공, callback-실패 \);
 
-
-
 ## ----**rxjs**
 
 비동기적, 이벤트 기반의 프로그램을 구성하기 위한 라이브러리의 집합
 
 RxJS는 이벤트 스트림과 데이터를 쉽게 만들고 다룰 수 있도록 도우는 라이브러리다. 복잡하지만 가독성이 좋은 비동기적 코드를 더 쉽게 작성할 수 있도록 도운다.
 
-  
 publish, subscribe방식
-
-
 
 [https://hyunseob.github.io/2016/10/09/understanding-reactive-programming-and-rxjs/](https://hyunseob.github.io/2016/10/09/understanding-reactive-programming-and-rxjs/)
 
 [https://xgrommx.github.io/rx-book/why\_rx.html](https://xgrommx.github.io/rx-book/why_rx.html)
 
-
-
 //버튼이 클릭될떄마다 실행
 
-// Get stream of button clicksconst btnClickStream =Rx.Observable.fromEvent\($addLocationBtn, 'click'\) 
+// Get stream of button clicksconst btnClickStream =Rx.Observable.fromEvent\($addLocationBtn, 'click'\)
 
 .map\(\(\) =&gt;true\)
 
