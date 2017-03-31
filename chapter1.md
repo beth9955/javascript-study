@@ -10,26 +10,17 @@ Promise는 아직은 아니지만 나중에 완료될 것으로 기대되는 연
 
 Promise -&gt;ECMA script6 스펙에 정식 포함
 
-
-
 ```js
 let promise =function(param){new Promise(function(resolve, reject)){
-    //비동기 
-
+   
+ //비동기 
  window.setTimeout\(function\(\){
-
  //조건    
-
  if\(param\){
-
            resolve\(\);
-
       }else{
-
            reject\(\);
-
       }
-
  },300\);
  });
 }
@@ -37,8 +28,6 @@ let promise =function(param){new Promise(function(resolve, reject)){
 //프로미스 실행
 promise(true).then(callback-성공, callback-실패 );
 ```
-
-
 
 ## ----**rxjs**
 
@@ -52,8 +41,6 @@ publish, subscribe방식
 
 [https://xgrommx.github.io/rx-book/why\_rx.html](https://xgrommx.github.io/rx-book/why_rx.html)
 
-
-
 ```js
 //버튼이 클릭될떄마다 실행
 // Get stream of button clicksconst btnClickStream =Rx.Observable.fromEvent($addLocationBtn, 'click')
@@ -61,14 +48,7 @@ publish, subscribe방식
 .forEach(val =>console.log('btnClickStream val', val)); //foreach:subscribe -스트림의 구독(subscriber)를 추가 
 .debouceTime(300) //시간지연
 .distinct() //이전값과 현재값비교등등 의 메소드가 있음.
-
 ```
-
-
-
-
-
-
 
 
 
