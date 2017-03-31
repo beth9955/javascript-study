@@ -12,7 +12,7 @@ Promise -&gt;ECMA script6 스펙에 정식 포함
 
 ```js
 let promise =function(param){new Promise(function(resolve, reject)){
-   
+
  //비동기 
  window.setTimeout\(function\(\){
  //조건    
@@ -43,7 +43,8 @@ publish, subscribe방식
 
 ```js
 //버튼이 클릭될떄마다 실행
-// Get stream of button clicksconst btnClickStream =Rx.Observable.fromEvent($addLocationBtn, 'click')
+// Get stream of button clicksconst 
+btnClickStream =Rx.Observable.fromEvent($addLocationBtn, 'click')
 .map(() =>true)
 .forEach(val =>console.log('btnClickStream val', val)); //foreach:subscribe -스트림의 구독(subscriber)를 추가 
 .debouceTime(300) //시간지연
